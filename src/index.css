@@ -24,6 +24,6 @@ body {
   border-top: 12px double rgb(228, 228, 184);
 }
 
-.content {
+.Content {
   min-height: calc(100vh - 184px);
 }
