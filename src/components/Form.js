@@ -1,13 +1,15 @@
 import React from "react";
 
-function Form(){
-  return ( 
+function Form(props){
+    return ( 
     <React.Fragment>
         <div className="Form">
-            Form
+            <form>
+                <input type="submit" value="Submit"/>
+            </form>
         </div>
     </React.Fragment>
-  );
+    );
 }
 
 export default Form;
