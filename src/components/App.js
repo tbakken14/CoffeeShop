@@ -6,6 +6,7 @@ function App(){
   return ( 
     <React.Fragment>
         <Header />
+        <div className="content"></div>
         <Footer />
     </React.Fragment>
   );

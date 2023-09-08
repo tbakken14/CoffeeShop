@@ -1,0 +1,29 @@
+body {
+  margin: 0px;
+}
+
+#root {
+  background-color: rgb(228, 228, 184);
+  height: 100%;
+  width: 100%;
+}
+
+.Header {
+  position: sticky;
+  top: 0%;
+  height: 80px;
+  background-color: rgb(167, 167, 137);
+  border-bottom: 12px double rgb(228, 228, 184);
+}
+
+.Footer {
+  position: sticky;
+  bottom: 0%;
+  height: 80px;
+  background-color: rgb(167, 167, 137);
+  border-top: 12px double rgb(228, 228, 184);
+}
+
+.content {
+  min-height: calc(100vh - 184px);
+}
