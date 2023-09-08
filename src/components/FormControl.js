@@ -13,8 +13,10 @@ class FormControl extends React.Component {
         this.setState({ isFormActive : true});
     }
 
-    handleSubmit() {
+    handleSubmit(event) {
+        this.props.addItem(event.target);
         this.setState({ isFormActive : false});
+        event.preventDefault();
     }
 
     render() {
