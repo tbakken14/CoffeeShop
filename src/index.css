@@ -27,3 +27,8 @@ body {
 .Content {
   min-height: calc(100vh - 184px);
 }
+
+label {
+  display: inline-block;
+  width: 50px;
+}
