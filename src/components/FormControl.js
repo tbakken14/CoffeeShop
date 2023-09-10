@@ -14,9 +14,19 @@ class FormControl extends React.Component {
     }
 
     handleSubmit(event) {
-        this.props.addItem(event.target);
-        this.setState({ isFormActive : false});
         event.preventDefault();
+        this.props.addItem(this.formToJSON(event.target));
+        this.setState({ isFormActive : false });
+    }
+
+    formToJSON(form) {
+        return Array.from(form.getElementsByTagName("input"))
+            .reduce((accumulator, currentValue) =>
+                {
+                    accumulator[currentValue.id] = currentValue.value;
+                    return accumulator;
+                },
+                {})
     }
 
     render() {

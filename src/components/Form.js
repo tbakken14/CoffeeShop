@@ -5,19 +5,19 @@ function Form(props){
     <React.Fragment>
         <div className="Form">
             <form onSubmit={props.onSubmit}>
-                <label for="name">Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input id="name" type="text" name="name" required/>
                 <br/>
-                <label for="origin">Origin:</label>
+                <label htmlFor="origin">Origin:</label>
                 <input id="origin" type="text" name="origin" required/>
                 <br/>
-                <label for="price">Price:</label>
+                <label htmlFor="price">Price:</label>
                 <input id="price" type="number" name="price" required/>
                 <br/>
-                <label for="roast">Roast:</label>
+                <label htmlFor="roast">Roast:</label>
                 <input id="roast" type="text" name="roast" required/>
                 <br/>
-                <input type="submit" value="Submit" />
+                <button type="submit" >Submit</button>
             </form>
         </div>
     </React.Fragment>
