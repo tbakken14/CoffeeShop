@@ -6,7 +6,8 @@ class Content extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuItems : []
+            menuItems : [{name: "Java", origin: "Colombia", price:"10", roast: "Dark"},
+                         {name: "Lima", origin: "Peru", price:"3", roast: "Light"}]
         }
     }
 

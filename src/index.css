@@ -32,3 +32,24 @@ label {
   display: inline-block;
   width: 50px;
 }
+
+.Menu {
+  display: inline_grid;
+  grid-auto-rows: max-content;
+  width: 100vw;
+  text-align: center;
+}
+
+.Item {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+.Item h2{
+  text-align: left;
+}
