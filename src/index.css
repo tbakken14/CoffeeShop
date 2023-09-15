@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0px;
 }
@@ -6,6 +8,7 @@ body {
   background-color: rgb(228, 228, 184);
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .Header {
@@ -26,7 +29,9 @@ body {
 
 .Content {
   min-height: calc(100vh - 184px);
+  width: 100vw;
 }
+
 
 label {
   display: inline-block;
@@ -34,10 +39,9 @@ label {
 }
 
 .Menu {
-  display: inline_grid;
-  grid-auto-rows: max-content;
   width: 100vw;
   text-align: center;
+  margin: 0px;
 }
 
 .Item {
@@ -52,4 +56,8 @@ label {
 
 .Item h2{
   text-align: left;
+}
+
+.Content h1 {
+  margin: 0px;
 }
