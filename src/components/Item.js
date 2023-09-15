@@ -1,27 +1,30 @@
 import React from "react";
+import Details from "./Details";
 
 class Item extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            quantity : 100
+            isDetailsActive : false
         }
     }
 
-    decrementQuantity() { 
-        this.setState({ quantity : this.state.quantity - 10 });
+    toggleDetails() {
+        this.setState({ isDetailsActive : !this.state.isDetailsActive})
     }
 
     render() {
+        let currentVisibleState = null;
+        if (this.state.isDetailsActive) {
+            const {name, ...details} = this.props;
+            currentVisibleState = <Details {...details}/>
+        }
         return ( 
             <React.Fragment>
                 <div className="Item">
                     <h1>{this.props.name}</h1>
-                    <h2>Origin: {this.props.origin}</h2>
-                    <h2>Price: ${this.props.price}</h2>
-                    <h2>Roast: {this.props.roast}</h2>
-                    <h2>Quantity: {this.state.quantity}</h2>
-                    <button onClick={this.decrementQuantity.bind(this)}>Sell Beans</button>
+                    <button onClick={this.toggleDetails.bind(this)}>Show Details</button>
+                    {currentVisibleState}
                 </div>
             </React.Fragment>
             );
