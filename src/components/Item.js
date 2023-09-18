@@ -37,7 +37,7 @@ Item.propTypes = {
     origin: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     roast: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
     delete: PropTypes.func.isRequired
 };
 

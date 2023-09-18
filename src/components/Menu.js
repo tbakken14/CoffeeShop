@@ -6,7 +6,7 @@ function Menu(props){
         <>
             <h1>Menu</h1>
             <div className="Menu">
-                {props.items.map((e, i) => <Item {...e} key={i} index={i} delete={props.delete}/>)}
+                {props.items.map((e, i) => <Item {...e} key={e.id} delete={props.delete}/>)}
             </div>
         </>
     );

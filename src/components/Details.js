@@ -12,8 +12,9 @@ class Details extends React.Component {
 
     sellOne() { 
         if (this.state.quantity > 0) {
-            this.setState({ quantity : this.state.quantity - 1 });
-            this.setState({ revenue : this.state.revenue + parseFloat(this.props.price) });
+            this.setState({ quantity : this.state.quantity - 1,
+                            revenue : this.state.revenue + parseFloat(this.props.price) 
+                          });
         }
     }
 
@@ -27,7 +28,7 @@ class Details extends React.Component {
                     <h2>Quantity: {this.state.quantity}</h2>
                     <h2>Revenue: ${this.state.revenue}</h2>
                     <button onClick={this.sellOne.bind(this)}>Sell Beans</button>
-                    <button onClick={() => this.props.delete(this.index)}>Delete Item</button>
+                    <button onClick={() => this.props.delete(this.id)}>Delete Item</button>
                 </div>
             </React.Fragment>
             );
@@ -38,6 +39,7 @@ Details.propTypes = {
     origin: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     roast: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     delete: PropTypes.func.isRequired
 };
 
