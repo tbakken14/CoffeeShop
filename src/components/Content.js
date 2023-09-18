@@ -16,12 +16,17 @@ class Content extends React.Component {
         this.setState({ menuItems : newMenuItems});
     }
 
+    deleteItem(index) {
+        this.state.menuItems.splice(index, 1);
+        this.setState({ menuItems : this.state.menuItems });
+    }
+
     render() {
         return (
             <React.Fragment>
                 <div className="Content">
                     <Menu 
-                        items={this.state.menuItems} />
+                        items={this.state.menuItems} delete={this.deleteItem.bind(this)}/>
                     <FormControl 
                         addItem={this.addItem.bind(this)} />
                 </div>
