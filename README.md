@@ -24,6 +24,10 @@ _This react application is for tracking the inventory of coffee for a shop. The 
 * _Navigate to the root project directory_
 * _Run the node server with bash command: $ npm start_
 
+## Component Diagram
+
+![Component Diagram](ComponentDiagram.png "Component Diagram")
+
 ## Known Bugs
 
 * Delete item function missing
