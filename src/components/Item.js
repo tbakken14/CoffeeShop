@@ -1,5 +1,6 @@
 import React from "react";
 import Details from "./Details";
+import PropTypes from "prop-types";
 
 class Item extends React.Component {
     constructor(props) {
@@ -30,5 +31,14 @@ class Item extends React.Component {
             );
     }
 }
+
+Item.propTypes = {
+    name: PropTypes.string.isRequired,
+    origin: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    roast: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    delete: PropTypes.func.isRequired
+};
 
 export default Item;

@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./Form";
+import PropTypes from "prop-types";
 
 class FormControl extends React.Component {
     constructor(props) {
@@ -44,5 +45,9 @@ class FormControl extends React.Component {
             );
     }
 }
+
+FormControl.propTypes = {
+    addItem: PropTypes.func.isRequired
+};
 
 export default FormControl;

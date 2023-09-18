@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Form(props){
     return ( 
@@ -23,5 +24,9 @@ function Form(props){
     </React.Fragment>
     );
 }
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;

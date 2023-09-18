@@ -1,4 +1,5 @@
 import Item from "./Item";
+import PropTypes from "prop-types";
 
 function Menu(props){
     return ( 
@@ -10,5 +11,10 @@ function Menu(props){
         </>
     );
 }
+
+Menu.propTypes = {
+    items: PropTypes.array.isRequired,
+    delete: PropTypes.func.isRequired
+};
 
 export default Menu;

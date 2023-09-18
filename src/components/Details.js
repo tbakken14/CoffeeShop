@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Details extends React.Component {
     constructor(props) {
@@ -30,5 +31,12 @@ class Details extends React.Component {
             );
     }
 }
+
+Details.propTypes = {
+    origin: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    roast: PropTypes.string.isRequired,
+    delete: PropTypes.func.isRequired
+};
 
 export default Details;
