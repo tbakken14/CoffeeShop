@@ -36,7 +36,9 @@ class FormControl extends React.Component {
             currentVisibleState = <Form onSubmit={this.handleSubmit.bind(this)}/>
         }
         else {
-            currentVisibleState = <button onClick={this.handleClick.bind(this)}>Add Item</button>
+            currentVisibleState = <div className="Form">
+                                      <button onClick={this.handleClick.bind(this)}>Add Item</button>
+                                  </div>
         }
         return (
             <React.Fragment>
