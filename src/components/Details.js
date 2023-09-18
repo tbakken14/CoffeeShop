@@ -11,8 +11,10 @@ class Details extends React.Component {
     }
 
     sellOne() { 
-        this.setState({ quantity : this.state.quantity - 1 });
-        this.setState({ revenue : this.state.revenue + parseFloat(this.props.price) });
+        if (this.state.quantity > 0) {
+            this.setState({ quantity : this.state.quantity - 1 });
+            this.setState({ revenue : this.state.revenue + parseFloat(this.props.price) });
+        }
     }
 
     render() {
